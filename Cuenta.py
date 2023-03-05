@@ -1,13 +1,20 @@
 class Cuenta:
-    def __init__(self, titular = None, cantidad = 0):
+    def __init__(self, titular = None, bono = 0, cantidad = 0):
         self.titular = titular
         self.cantidad = cantidad
+        self.bono = bono
 
     def getTitular(this):
         return this.titular
 
     def setTitular(this, nuevoTitular):
         this.titular = nuevoTitular
+
+    def getBono(this):
+        return this.bono
+
+    def setBono(this, nuevoBono):
+        this.bono = nuevoBono
 
     def getMonto(this):
         return this.monto
@@ -17,7 +24,7 @@ class Cuenta:
 
     def mostrar(this):
         this.titular.mostrar()
-        print("Cantidad: ", this.cantidad)
+        print("Cantidad: ", this.cantidad, this.bono)
 
     def ingresar(self, cantidad):
         if(cantidad > 0):
